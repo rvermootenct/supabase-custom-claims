@@ -244,7 +244,7 @@ You can force a refresh of the current session token by calling `supabase.auth.r
 ##### find all users who have a `userlevel` over 100
 `select * from auth.users where (auth.users.raw_app_meta_data->'userlevel')::numeric > 100;`
 ##### find all users whose `userrole` is set to `"MANAGER"`
-(note for strings you need to add double-quotes becuase data is data is stored as JSONB)
+(note for strings you need to add double-quotes becuase data is stored as JSONB)
 `select * from auth.users where (auth.users.raw_app_meta_data->'userrole')::text = '"MANAGER"';`
 
 ### What's the difference between `auth.users.raw_app_meta_data` and `auth.users.raw_user_meta_data`?
